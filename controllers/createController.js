@@ -15,7 +15,8 @@ router.post('/', async (req, res) => {
         res.redirect('/catalog/' + result.id);
     } catch(err) {
         res.render('create', {
-            title: 'Request Error'
+            title: 'Request Error',
+            error: err.message.split('\n')
         });
     }
 });

@@ -2,12 +2,31 @@
 
     <h1 class="item">Accomodation</h1>
 
-    <!-- List of available auctions -->
+    <main class="item pad-large align-center">
+        <form class="layout left large" method="get">
+            <div class="col">
+                <label><span>Location</span><input name="city" value="{{city}}"></label>
+                <label><span>Terms</span><input name="search" value="{{search}}"></label>
+            </div>
+            <div class="content">
+                <label><span>From price</span><input type="number" name="fromPrice" min="1" max="1000"
+                        value="{{fromPrice}}"></label>
+                <label><span>To price</span><input type="number" name="toPrice" min="1" max="1000"
+                        value="{{toPrice}}"></label>
+            </div>
+            <input class="action" type="submit" value="Search">
+        </form>
+    </main>
+
+    {{#if rooms}}
+
     <ul class="catalog cards">
         {{#each rooms}}
         {{> roomCard}}
         {{/each}}
     </ul>
+
+    {{else}}
 
     <main class="item pad-large align-center">
         <p>Nothing has been listed yet. Be the first!</p>
@@ -15,5 +34,7 @@
             <a class="action" href="/create">Host Accomodation</a>
         </div>
     </main>
+
+    {{/if}}
 
 </section>
