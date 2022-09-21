@@ -1,0 +1,11 @@
+User
+Seller Profile
+Item
+Accessory
+
+Topics:
+- AirBnB - Users-Acommodation-Extras-Host
+- Car Listings - Users-Cars-Accessory-Seller
+- PC Store - Users-PC-Periphery-Seller
+- Event Manager - Users-Events-Food&Drinks-Organizer
+- Spotify - Users-Authors-Songs-Collection
