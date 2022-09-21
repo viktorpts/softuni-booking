@@ -1,10 +1,19 @@
-<section>
-    <h1>All Accomodation</h1>
-    <main>
-        <ul>
-            {{#each rooms}}
-            {{> roomCard}}
-            {{/each}}
-        </ul>
+<section id="catalog-section" class="spaced">
+
+    <h1 class="item">Accomodation</h1>
+
+    <!-- List of available auctions -->
+    <ul class="catalog cards">
+        {{#each rooms}}
+        {{> roomCard}}
+        {{/each}}
+    </ul>
+
+    <main class="item pad-large align-center">
+        <p>Nothing has been listed yet. Be the first!</p>
+        <div>
+            <a class="action" href="/create">Host Accomodation</a>
+        </div>
     </main>
+
 </section>

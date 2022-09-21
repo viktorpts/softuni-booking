@@ -1,12 +1,31 @@
-<section>
+<section id="catalog-section">
     {{#with room}}
-    <h1>{{name}} - Details</h1>
-    <main>
-        <div>
-            <img src="{{imgUrl}}">
-        </div>
-        <p>{{description}}</p>
-        <p><strong>Price per night: {{price}}€</strong></p>
-    </main>
+    <h1 class="item">{{name}}</h1>
+    <div class="item padded">
+
+        <main class="layout right large">
+
+            <div class="col">
+
+                <img src="{{imgUrl}}" class="img-large">
+
+            </div>
+
+            <div class="content pad-med">
+
+                <p>City: <strong>{{city}}</strong></p>
+                <p>{{description}}</p>
+
+                <div class="align-center">
+                    <div>
+                        Price per night: <strong>{{price}}€</strong>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>Listed by (TODO add owner)</footer>
+    </div>
     {{/with}}
 </section>
