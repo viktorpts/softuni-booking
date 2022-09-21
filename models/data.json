@@ -1,0 +1,10 @@
+[
+    {
+        "id": "1234",
+        "name": "Room",
+        "description": "Nice and cozy",
+        "city": "Bansko",
+        "beds": 2,
+        "price": 130
+    }
+]

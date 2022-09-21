@@ -4,7 +4,7 @@ Item
 Accessory
 
 Topics:
-- AirBnB - Users-Acommodation-Extras-Host
+- Booking - Users-Acommodations-Facilities-Reservations
 - Car Listings - Users-Cars-Accessory-Seller
 - PC Store - Users-PC-Periphery-Seller
 - Event Manager - Users-Events-Food&Drinks-Organizer
