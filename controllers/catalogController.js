@@ -24,6 +24,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const roomId = req.params.id;
     const room = await getById(roomId);
+    console.log(room.facilities);
 
     if (room) {
         res.render('details', {

@@ -20,6 +20,11 @@
                     <div>
                         Price per night: <strong>{{price}}€</strong>
                     </div>
+                    <ul class="catalog">
+                        {{#each facilities}}
+                        <li>{{label}} <img class="facility-icon" src="{{iconUrl}}"></li>
+                        {{/each}}
+                    </ul>
 
                     <a class="action cta" href="/facility/{{_id}}/decorateRoom">Edit Facilities</a>
                 </div>
