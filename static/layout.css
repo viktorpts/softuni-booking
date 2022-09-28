@@ -79,3 +79,8 @@ p {
     margin-right: auto;
     width: 200px;
 }
+
+.facility-icon {
+    width: 24px;
+    height: 24px;
+}
