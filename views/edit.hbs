@@ -1,0 +1,41 @@
+<section id="create-section">
+
+    <h1 class="item">Edit Accomodation</h1>
+
+    <main class="item padded align-center">
+
+        <form class="layout left large" method="post" action="/room/{{room._id}}/edit">
+            {{#if error}}
+            <div class="error-box">
+                {{#each error}}
+                <p>{{this}}</p>
+                {{/each}}
+            </div>
+            {{/if}}
+
+            {{#with room}}
+            <div class="col aligned">
+                <label><span>Name</span><input type="text" name="name" value="{{name}}"></label>
+                <label><span>City</span><input type="text" name="city" value="{{city}}"></label>
+                <label><span>Beds</span><input type="number" name="beds" value="{{beds}}"></label>
+                <label><span>Price per night</span><input type="number" name="price" value="{{price}}"></label>
+                <label><span>Image URL</span><input type="text" name="imgUrl" value="{{imgUrl}}"></label>
+            </div>
+
+            <div class="content pad-med align-center vertical">
+                <label>
+                    <span>Description</span>
+                    <textarea name="description">{{description}}</textarea>
+                </label>
+
+                <div class="align-center">
+                    <input class="action" type="submit" value="Update Item">
+                </div>
+            </div>
+            {{/with}}
+
+        </form>
+
+    </main>
+
+</section>
