@@ -8,7 +8,8 @@ const roomSchema = new Schema({
     beds: { type: Number, required: true, min: 1 },
     price: { type: Number, required: true, min: 0.01 },
     imgUrl: { type: String },
-    facilities: { type: [Types.ObjectId], default: [], ref: 'Facility' }
+    facilities: { type: [Types.ObjectId], default: [], ref: 'Facility' },
+    owner: { type: Types.ObjectId, ref: 'User', required: true }
 });
 
 const Room = model('Room', roomSchema);

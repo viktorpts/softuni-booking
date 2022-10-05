@@ -12,7 +12,7 @@ module.exports = (app) => {
     app.use('/catalog', catalogController);
     app.use('/create', hasUser(), createController);
     app.use('/facility', facilityController);
-    app.use('/auth', isGuest(), authController);
+    app.use('/auth', authController);
     // TODO attach other controllers
 
     app.all('*', defaultController);

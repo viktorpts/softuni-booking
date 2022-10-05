@@ -14,6 +14,9 @@
                 <img src="/static/assets/logo.png">
                 <span>SoftUni Sleepover</span>
             </a>
+            {{#if hasUser}}
+            <span>Welcome, {{username}}</span>
+            {{/if}}
             <nav class="main-nav nav-mid">
                 <ul>
                     <li>
