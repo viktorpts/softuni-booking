@@ -4,6 +4,10 @@ const router = require('express').Router();
 
 
 router.get('/', async (req, res) => {
+
+    const user = req.user;
+    console.log(user);
+
     const search = req.query.search || '';
     const city = req.query.city || '';
     const fromPrice = Number(req.query.fromPrice) || 1;
