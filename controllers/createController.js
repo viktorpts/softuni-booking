@@ -1,4 +1,5 @@
 const { create } = require('../services/roomService');
+const { parseError } = require('../utils/parser');
 
 const router = require('express').Router();
 
@@ -13,10 +14,11 @@ router.post('/', async (req, res) => {
     try {
         const result = await create(req.body, req.user._id);
         res.redirect('/catalog/' + result._id);
-    } catch(err) {
+    } catch(error) {
         res.render('create', {
             title: 'Request Error',
-            error: err.message.split('\n')
+            body: req.body,
+            error: parseError(error)
         });
     }
 });

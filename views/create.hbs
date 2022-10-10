@@ -7,23 +7,23 @@
         <form class="layout left large" method="post" action="/create">
             {{#if error}}
             <div class="error-box">
-                {{#each error}}
+                {{#each error.messages}}
                 <p>{{this}}</p>
                 {{/each}}
             </div>
             {{/if}}
             <div class="col aligned">
-                <label><span>Name</span><input type="text" name="name"></label>
-                <label><span>City</span><input type="text" name="city"></label>
-                <label><span>Beds</span><input type="number" name="beds"></label>
-                <label><span>Price per night</span><input type="number" name="price"></label>
-                <label><span>Image URL</span><input type="text" name="imgUrl"></label>
+                <label><span>Name</span><input {{#if error.fields.name}}class="field-error"{{/if}} type="text" name="name" value="{{body.name}}"></label>
+                <label><span>City</span><input {{#if error.fields.city}}class="field-error"{{/if}} type="text" name="city" value="{{body.city}}"></label>
+                <label><span>Beds</span><input {{#if error.fields.beds}}class="field-error"{{/if}} type="number" name="beds" value="{{body.beds}}"></label>
+                <label><span>Price per night</span><input {{#if error.fields.price}}class="field-error"{{/if}} type="number" name="price" value="{{body.price}}"></label>
+                <label><span>Image URL</span><input {{#if error.fields.imgUrl}}class="field-error"{{/if}} type="text" name="imgUrl" value="{{body.imgUrl}}"></label>
             </div>
 
             <div class="content pad-med align-center vertical">
                 <label>
                     <span>Description</span>
-                    <textarea name="description"></textarea>
+                    <textarea {{#if error.fields.description}}class="field-error"{{/if}} name="description">{{body.description}}</textarea>
                 </label>
 
                 <div class="align-center">

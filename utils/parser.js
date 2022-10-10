@@ -19,7 +19,7 @@ function parseError(error) {
         result.messages = error.map(e => e.msg);
         result.fields = Object.fromEntries(error.map(e => [e.param, e.param]));
     } else {
-        result.messages.push(error.message);
+        result.messages = error.message.split('\n');
     }
 
     return result;
