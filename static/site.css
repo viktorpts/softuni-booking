@@ -69,3 +69,7 @@ html {
     background-color: hsl(var(--action-color), var(--action-s), 25%);
     box-shadow: var(--shadow);
 }
+
+.field-error {
+    border: 1px solid red;
+}
